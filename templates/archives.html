@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="posts">
+        {% for article in article_list %}
+        <section class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href="{% url "detail" id=article.id %}">{{ article.title }}</a>
+                </h2>
+                <p class="post-meta">
+                    日期: <a class="post-author" href="#">{{ article.date_time }}</a>
+                    <a class="post-category post-category-js" href="#">{{ article.category }}</a>
+                </p>
+            </header>
+        </section>
+        {% empty %}
+        <h2 class="post-title"><a>没找到文章</a></h2>
+        {% endfor %}
+    </div>
+{% endblock %}

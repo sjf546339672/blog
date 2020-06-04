@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+    <title>Shijf 的博客</title>
+    <link rel="stylesheet" href="/static/css/pure-min.css">
+    <link rel="stylesheet" href="/static/css/grids-responsive-min.css">
+    <link rel="stylesheet" href="/static/css/blog.css">
+    <link rel="stylesheet" href="/static/css/monokai.css">
+    <style type="text/css">
+    pre {
+        border: 1px solid #eee;
+        background: #f7f7f7;
+    }
+
+    form {
+        margin-top: 20px;
+        width: 282px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-md-1-4">
+            <div class="header">
+                <h1 class="brand-title">Sjf 的博客</h1>
+                <h2 class="brand-tagline">记忆录</h2>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="pure-button" href="{% url 'home' %}">首页</a>
+                        </li>
+                        <li class="nav-item">
+{#                            <a class="pure-button" href="{% url 'archives' %}">文章</a>#}
+                            <a class="pure-button" href="{% url 'archives' %}">文章</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="#">友情博客地址</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="{% url 'write' %}">写博客</a>
+                        </li>
+                    </ul>
+{#                    <form class="pure-form" action="{% url 'search' %}" method="get">#}
+                    <form class="pure-form" action="#" method="get">
+                        <input class="pure-input-3-3" type="search" name="kw" placeholder="请输入标签关键字" required>
+                    </form>
+                </nav>
+            </div>
+        </div>
+        <div class="content pure-u-1 pure-u-md-3-4">
+            <div>
+                {% block content %} {% endblock %}
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <ul>
+                            <li><a href="#">关于我</a></li>
+                            <li><a href="#">GitHub地址</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

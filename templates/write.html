@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    {% csrf_token %}
+    <form action="{% url 'write' %}" method="post">
+        <p>
+            <label for="title">文章标题：</label>
+            <input type="text" name="title" id="title">
+        </p>
+        <p>
+            <label for="category">文章类别：</label>
+            <input type="text" name="category" id="category">
+        </p>
+        <p>
+            <label for="content">文章内容：</label>
+            <textarea rows="10" cols="100" name="content" id="content"></textarea>
+        </p>
+        <p>
+            <button name="sumbit" id="submit"  style="height: 35px;width: 150px;background-color: lightslategray">提交</button>
+        </p>
+    </form>
+{% endblock %}
