@@ -8,10 +8,9 @@
 
                 <p class="post-meta">
                     {#                        日期:  <a class="post-author" href="#">{{ article.date_time |date:"Y /m /d"}}</a> <a class="post-category post-category-js" href="{% url "search_tag" my_tag=article.category  %}">{{ article.category | title }}</a>#}
-                    日期: <a class="post-author"
-                           href="#">{{ article.date_time }}</a><a
-                        class="post-category post-category-js"
-                        href="#">{{ article.category }}</a>
+                    日期: <a class="post-author" href="#">{{ article.date_time }}</a>
+                    <a class="post-category post-category-js" href="#">{{ article.category }}</a>
+                    <a class="post-category post-category-js" href="{% url 'delete' id=article.id %}">删除</a>
                 </p>
             </header>
             <div class="post-description">
