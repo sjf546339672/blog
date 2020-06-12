@@ -8,15 +8,36 @@
 
                 <p class="post-meta">
                     {#                        日期:  <a class="post-author" href="#">{{ article.date_time |date:"Y /m /d"}}</a> <a class="post-category post-category-js" href="{% url "search_tag" my_tag=article.category  %}">{{ article.category | title }}</a>#}
-                    日期: <a class="post-author" href="#">{{ article.date_time }}</a>
-                    <a class="post-category post-category-js" href="#">{{ article.category }}</a>
-                    <a class="post-category post-category-js" href="{% url 'delete' id=article.id %}">删除</a>
+                    日期: <a class="post-author"
+                           href="#">{{ article.date_time }}</a>
+                    <a class="post-category post-category-js"
+                       href="#">{{ article.category }}</a>
+                    <a class="post-category post-category-js"
+                       href="{% url 'delete' id=article.id %}">删除</a>
                 </p>
             </header>
             <div class="post-description">
                 <p>
                     {{ article.content }}
                 </p>
+            </div>
+            <div style="margin-top: 50px">
+                <span style="background-color: #e0e0e0">显示评论内容：</span>
+                {% for comment in comment_list %}
+                    <p>{{ comment.content }}</p>
+                {% endfor %}
+            </div>
+
+            <div style="margin-top: 350px">
+                <form action="{% url 'comments:submit_comment' id=article.id %}" method="POST">
+                    <label for="comment">添加评论：</label>
+                    <textarea rows="7" cols="80" name="comment"
+                              id="comment"></textarea>
+                    <button name="sumbit" id="submit"
+                            style="height: 35px;width: 150px;background-color: lightslategray">
+                        提交评论
+                    </button>
+                </form>
             </div>
         </section>
     </div>
