@@ -73,6 +73,7 @@ class WriteView(APIView):
         category = unquote(data[1].split("=")[1]).replace("+", " ")
         email = unquote(data[2].split("=")[1]).replace("+", " ")
         content = unquote(data[3].split("=")[1])
+
         result = all([title, category, email, content])
         if result is True:
             if check_email(email) is True:
@@ -99,5 +100,3 @@ class SearchTagView(View):
             return render(request, 'tag.html', {'article_list': article_list})
         else:
             return redirect('/')
-
-

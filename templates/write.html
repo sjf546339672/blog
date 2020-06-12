@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
     {% csrf_token %}
     <form action="{% url 'write' %}" method="post">
@@ -19,7 +20,10 @@
             <textarea rows="10" cols="100" name="content" id="content"></textarea>
         </p>
         <p>
-            <button name="sumbit" id="submit"  style="height: 35px;width: 150px;background-color: lightslategray">发表博客</button>
+            <button name="sumbit" id="submit"
+                    style="height: 35px;width: 150px;background-color: lightslategray">
+                发表博客
+            </button>
         </p>
     </form>
 {% endblock %}
