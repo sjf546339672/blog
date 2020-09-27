@@ -28,6 +28,7 @@
         <option value="$MODULE_DIR$/DjangoBlog/celery_tasks" />
         <option value="$MODULE_DIR$/article" />
         <option value="$MODULE_DIR$/comment" />
+        <option value="$MODULE_DIR$/comment/migrations" />
       </list>
     </option>
   </component>

@@ -24,7 +24,6 @@ from DjangoBlog import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('article.urls')),
-    path('comment/', include('comment.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 

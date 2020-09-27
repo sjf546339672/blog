@@ -1,7 +1,7 @@
 # coding: utf-8
 from django.urls import path
-from .views import (test, IndexView, HomeView,
-                    DetailView, ArchiversView, WriteView, DeleteView, SearchTagView
+from .views import (test, IndexView, HomeView, DetailView, ArchiversView,
+                    WriteView, DeleteView, SearchTagView, DeleteCommentView
                     )
 
 urlpatterns = [
@@ -13,4 +13,5 @@ urlpatterns = [
     path('write/', WriteView.as_view(), name='write'),
     path('delete/<int:id>', DeleteView.as_view(), name='delete'),
     path('search/', SearchTagView.as_view(), name='search'),
+    path('delcomment/<int:id>/<str:comment>', DeleteCommentView.as_view(), name='delcomment'),
 ]

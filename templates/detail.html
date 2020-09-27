@@ -5,7 +5,6 @@
         <section class="post">
             <header class="post-header">
                 <h2 class="post-title">{{ article.title }}</h2>
-
                 <p class="post-meta">
                     {#                        日期:  <a class="post-author" href="#">{{ article.date_time |date:"Y /m /d"}}</a> <a class="post-category post-category-js" href="{% url "search_tag" my_tag=article.category  %}">{{ article.category | title }}</a>#}
                     日期: <a class="post-author"
@@ -23,13 +22,15 @@
             </div>
             <div style="margin-top: 50px">
                 <span style="background-color: #e0e0e0">显示评论内容：</span>
-                {% for comment in comment_list %}
-                    <p>{{ comment.content }}</p>
-                {% endfor %}
+                    {% for comment in article.comments %}
+                        <p>{{ comment }} <a class="post-category" href="{% url 'delcomment' article.id comment %}">删除评论</a></p>
+                        {% empty %}
+                        <p>暂无数据</p>
+                    {% endfor %}
             </div>
 
-            <div style="margin-top: 350px">
-                <form action="{% url 'comments:submit_comment' id=article.id %}" method="POST">
+            <div style="margin-top: 50px">
+                <form action="{% url 'detail' id=article.id %}" method="POST">
                     <label for="comment">添加评论：</label>
                     <textarea rows="7" cols="80" name="comment"
                               id="comment"></textarea>

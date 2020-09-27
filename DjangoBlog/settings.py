@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'article',
     'ckeditor',
     'ckeditor_uploader',
-    'comment',
     'django_comments',
     'django.contrib.sites'
 ]

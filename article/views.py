@@ -1,6 +1,6 @@
 # coding: utf-8
 import json
-
+import markdown
 from django.core.mail import send_mail
 from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect, reverse
@@ -8,7 +8,6 @@ from django.views.generic import View
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from DjangoBlog import settings
 from DjangoBlog.celery_tasks.tasks import send_register_active_email
 from .models import Article
 from urllib.parse import unquote
@@ -18,7 +17,7 @@ from django.core.exceptions import ValidationError
 
 
 def test(request):
-    return render(request, 'home.html')
+    return HttpResponse(1111)
 
 
 class IndexView(APIView):
@@ -49,12 +48,61 @@ class HomeView(View):
 
 
 class DetailView(View):
+
     def get(self, request, id):
         try:
             article = Article.objects.get(id=str(id))
+            comments = article.comments.split(";!;")
+            result = [i for i in comments if i != '']
+            data = {
+                "title": article.title,
+                "date_time": article.date_time,
+                "category": article.category,
+                "id": article.id,
+                "content": article.content,
+                "comments": result,
+            }
         except Article.DoesNotExist:
             raise Http404
-        return render(request, 'detail.html', {"article": article})
+        return render(request, 'detail.html', {"article": data})
+
+    def post(self, request, id):
+        data = unquote(request.body.decode()).split("&")[0].split("=")[1] + ";!;"
+        article = Article.objects.get(id=str(id))
+        Article.objects.filter(id=str(id)).update(comments=article.comments+data)
+
+        article = Article.objects.get(id=str(id))
+        comments = article.comments.split(";!;")
+        result = [i for i in comments if i != '']
+        data = {
+            "title": article.title,
+            "date_time": article.date_time,
+            "category": article.category,
+            "id": article.id,
+            "content": article.content,
+            "comments": result,
+        }
+        return render(request, 'detail.html', {"article": data})
+
+
+class DeleteCommentView(View):
+    def get(self, request, id, comment):
+        comment = unquote(comment)
+        article = Article.objects.get(id=str(id))
+        comments = article.comments
+        comments = comments.replace(comment+";!;", "")
+        Article.objects.filter(id=str(id)).update(comments=comments)
+        get_comments = article.comments.split(";!;")
+        get_result = [i for i in get_comments if i != '']
+        data = {
+            "title": article.title,
+            "date_time": article.date_time,
+            "category": article.category,
+            "id": article.id,
+            "content": article.content,
+            "comments": get_result,
+        }
+        return render(request, 'detail.html', {"article": data})
 
 
 class ArchiversView(View):
@@ -100,3 +148,5 @@ class SearchTagView(View):
             return render(request, 'tag.html', {'article_list': article_list})
         else:
             return redirect('/')
+
+

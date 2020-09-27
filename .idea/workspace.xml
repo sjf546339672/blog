@@ -2,14 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7ec561f-346c-4b6e-b4b3-06e2dd0d835b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DjangoBlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoBlog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoBlog/celery_tasks/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoBlog/celery_tasks/tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoBlog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoBlog/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoBlog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoBlog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/comment.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +53,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="FORCE_PUSH_ALLOWED" value="false" />
   </component>
+  <component name="JupyterTrust" id="e39ff614-018a-4fa6-8534-43acfa576841" />
   <component name="ProjectId" id="1cselgoU4t6JzL3NdK1Z63ZbJOY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -56,7 +72,7 @@
     <property name="ToolWindowLog Viewer.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -70,6 +86,12 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\AllProject\MyProject\DjangoBlog" />
+      <recent name="E:\AllProject\MyProject\DjangoBlog\article" />
+      <recent name="E:\AllProject\MyProject\DjangoBlog\static" />
+      <recent name="E:\AllProject\MyProject\DjangoBlog\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\AllProject\MyProject\DjangoBlog\media" />
       <recent name="E:\AllProject\MyProject\DjangoBlog\static" />
@@ -77,14 +99,8 @@
       <recent name="E:\AllProject\MyProject\DjangoBlog\DjangoBlog" />
       <recent name="E:\AllProject\MyProject\DjangoBlog\article" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\AllProject\MyProject\DjangoBlog" />
-      <recent name="E:\AllProject\MyProject\DjangoBlog\article" />
-      <recent name="E:\AllProject\MyProject\DjangoBlog\static" />
-      <recent name="E:\AllProject\MyProject\DjangoBlog\templates" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.zzzz">
+  <component name="RunManager" selected="Python.tasks">
     <configuration name="tasks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DjangoBlog" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,11 +175,12 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.zzzz" />
         <item itemvalue="Python.tasks" />
+        <item itemvalue="Python.zzzz" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -188,6 +205,14 @@
       <workItem from="1591921959475" duration="598000" />
       <workItem from="1591924071646" duration="9137000" />
       <workItem from="1591935619303" duration="20923000" />
+      <workItem from="1592181844930" duration="10692000" />
+      <workItem from="1592199507668" duration="13038000" />
+      <workItem from="1592214457929" duration="4477000" />
+      <workItem from="1594092804096" duration="1694000" />
+      <workItem from="1595423982673" duration="1241000" />
+      <workItem from="1595426173093" duration="71000" />
+      <workItem from="1596094048262" duration="1541000" />
+      <workItem from="1599017190704" duration="718000" />
     </task>
     <servers />
   </component>
@@ -201,7 +226,7 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -216,10 +241,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591858888300">
+    <state x="552" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592187776020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591858888300" />
+    <state x="552" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592187776020" />
     <state x="624" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591944346193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -228,26 +253,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="491" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591346228306" />
-    <state x="687" y="216" key="FileChooserDialogImpl" timestamp="1591951884142">
+    <state x="687" y="216" key="FileChooserDialogImpl" timestamp="1594096276684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="687" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591951884142" />
-    <state width="1867" height="264" key="GridCell.Tab.0.bottom" timestamp="1591931299880">
+    <state x="687" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594096276684" />
+    <state width="1867" height="264" key="GridCell.Tab.0.bottom" timestamp="1592214127854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591931299880" />
-    <state width="1867" height="264" key="GridCell.Tab.0.center" timestamp="1591931299880">
+    <state width="1867" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592214127854" />
+    <state width="1867" height="264" key="GridCell.Tab.0.center" timestamp="1592214127854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591931299880" />
-    <state width="1867" height="264" key="GridCell.Tab.0.left" timestamp="1591931299880">
+    <state width="1867" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592214127854" />
+    <state width="1867" height="264" key="GridCell.Tab.0.left" timestamp="1592214127853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591931299880" />
-    <state width="1867" height="264" key="GridCell.Tab.0.right" timestamp="1591931299880">
+    <state width="1867" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592214127853" />
+    <state width="1867" height="264" key="GridCell.Tab.0.right" timestamp="1592214127854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591931299880" />
+    <state width="1867" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592214127854" />
     <state x="437" y="191" key="IDE.errors.dialog" timestamp="1591938204737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -256,17 +281,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591339647437" />
-    <state x="835" y="390" width="387" height="290" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1591953382436">
+    <state x="835" y="390" width="387" height="290" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1592187727089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="835" y="390" width="387" height="290" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1591953382436" />
-    <state x="589" y="195" width="742" height="650" key="find.popup" timestamp="1591927720097">
+    <state x="835" y="390" width="387" height="290" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1592187727089" />
+    <state x="589" y="195" width="742" height="650" key="find.popup" timestamp="1592205583150">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="589" y="195" width="742" height="650" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591927720097" />
+    <state x="589" y="195" width="742" height="650" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592205583150" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DjangoBlog$tasks.coverage" NAME="tasks Coverage Results" MODIFIED="1591869700952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DjangoBlog/celery_tasks" />
+    <SUITE FILE_PATH="coverage/DjangoBlog$tasks.coverage" NAME="tasks Coverage Results" MODIFIED="1592211363072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DjangoBlog/celery_tasks" />
     <SUITE FILE_PATH="coverage/DjangoBlog$zzzz.coverage" NAME="zzzz Coverage Results" MODIFIED="1591931247642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
